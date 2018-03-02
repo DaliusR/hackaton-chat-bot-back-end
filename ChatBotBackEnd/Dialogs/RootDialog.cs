@@ -22,6 +22,8 @@ namespace ChatBotBackEnd.Dialogs
             // calculate something for us to return
             int length = (activity.Text ?? string.Empty).Length;
 
+            //Adding comment to check how git logs this project
+
             // return our reply to the user
             await context.PostAsync($"You sent {activity.Text} which was {length} characters");
 
