@@ -15,6 +15,7 @@ namespace ChatBotBackEnd.Helpers
             };
 
             commonModel.Session.Id = aiResponse.SessionId;
+            commonModel.Request.Text = aiResponse.Result.ResolvedQuery;
             commonModel.Request.Intent = aiResponse.Result.Metadata.IntentName;
             commonModel.Request.State = aiResponse.Result.ActionIncomplete ? "IN_PROGRESS" : "COMPLETED";
             commonModel.Request.Channel = aiResponse.Result.Source;

@@ -39,6 +39,7 @@ namespace ChatBotBackEnd.Models.Common
         public string Intent { get; set; }
         public string State { get; set; }
         public string Channel { get; set; }
+        public string Text { get; set; }
         public List<KeyValuePair<string,string>> Parameters { get; set; }
     }
 
