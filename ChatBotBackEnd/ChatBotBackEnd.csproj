@@ -121,7 +121,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Handlers\SecretIntent.cs" />
     <Compile Include="Handlers\WelcomeIntent.cs" />
+    <Compile Include="Handlers\YesIntent.cs" />
     <Compile Include="Helpers\CommonModelMapper.cs" />
     <Compile Include="Helpers\IntentRouter.cs" />
     <Compile Include="Helpers\MixedDateTimeConverter.cs" />

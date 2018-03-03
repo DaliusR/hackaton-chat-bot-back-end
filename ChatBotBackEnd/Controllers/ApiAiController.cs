@@ -9,6 +9,7 @@ namespace ChatBotBackEnd.Controllers
         public dynamic Post(AIResponse aiResponse)
         {
             var commonModel = CommonModelMapper.ApiAiToCommonModel(aiResponse);
+
             if (commonModel == null)
                 return null;
 

@@ -14,10 +14,8 @@ namespace ChatBotBackEnd
             IntentHandlers = new IntentsList
             {
                 //Register intents here
-                
-                //{ "AMAZON.StopIntent", (cm) => Handlers.CancelIntent.Process(cm) }
-                //{ "AMAZON.CancelIntent", (cm) => Handlers.CancelIntent.Process(cm) },
-                //{ "AMAZON.HelpIntent", (cm) => Handlers.HelpIntent.Process(cm) },
+                { "YesIntent", (cm) => Handlers.YesIntent.Process(cm) },
+                { "SecretIntent", (cm) => Handlers.SecretIntent.Process(cm) },
                 { "DefaultWelcomeIntent", (cm) => Handlers.WelcomeIntent.Process(cm) }
             };
 

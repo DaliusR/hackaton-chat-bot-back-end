@@ -6,10 +6,10 @@ namespace ChatBotBackEnd.Handlers
     {
         internal static CommonModel Process(CommonModel commonModel)
         {
-            commonModel.Response.Text = "Hi there, this is ReviewChatBot speaking";
+            commonModel.Response.Text = "Hi there, this is ReviewChatBot speaking, can we talk for a minute? Please type yes/no";
             commonModel.Response.Prompt = "My job is to figure out why you want to leave a negative review";
 
-            commonModel.Session.EndSession = false;
+            commonModel.Session.EndSession = true;
 
             return commonModel;
         }
