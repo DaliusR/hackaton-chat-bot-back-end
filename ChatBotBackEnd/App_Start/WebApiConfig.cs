@@ -1,16 +1,26 @@
 ﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Web.Http;
+using ChatBotBackEnd.Models;
 
 namespace ChatBotBackEnd
 {
     public static class WebApiConfig
     {
+        public static IntentsList IntentHandlers { get; private set; }
+
         public static void Register(HttpConfiguration config)
         {
+            IntentHandlers = new IntentsList
+            {
+                //Register intents here
+                
+                //{ "AMAZON.StopIntent", (cm) => Handlers.CancelIntent.Process(cm) }
+                //{ "AMAZON.CancelIntent", (cm) => Handlers.CancelIntent.Process(cm) },
+                //{ "AMAZON.HelpIntent", (cm) => Handlers.HelpIntent.Process(cm) },
+                { "DefaultWelcomeIntent", (cm) => Handlers.WelcomeIntent.Process(cm) }
+            };
+
             // Json settings
             config.Formatters.JsonFormatter.SerializerSettings.NullValueHandling = NullValueHandling.Ignore;
             config.Formatters.JsonFormatter.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
