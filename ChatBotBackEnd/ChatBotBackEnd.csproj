@@ -134,6 +134,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\ApiAiController.cs" />
     <Compile Include="Controllers\MessagesController.cs" />
+    <Compile Include="Controllers\ReviewController.cs" />
     <Compile Include="Data\DataModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -167,6 +168,7 @@
     <Compile Include="Helpers\MixedDateTimeConverter.cs" />
     <Compile Include="Models\Common\CommonModel.cs" />
     <Compile Include="Models\IntentsList.cs" />
+    <Compile Include="Models\UserReview.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
