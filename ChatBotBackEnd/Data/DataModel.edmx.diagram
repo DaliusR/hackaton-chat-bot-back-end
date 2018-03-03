@@ -6,6 +6,7 @@
     <edmx:Diagrams>
       <Diagram DiagramId="bca4c503efb84d078f9246e4fd47f120" Name="Diagram1">
         <EntityTypeShape EntityType="ChatBotDBModel.Message" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ChatBotDBModel.UserReview" Width="1.5" PointX="3.375" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

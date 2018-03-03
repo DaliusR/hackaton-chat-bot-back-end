@@ -12,11 +12,11 @@ namespace ChatBotBackEnd.Data
     using System;
     using System.Collections.Generic;
     
-    public partial class Message
+    public partial class UserReview
     {
         public int Id { get; set; }
-        public string SessionId { get; set; }
         public string Msg { get; set; }
-        public byte[] reviewtime { get; set; }
+        public string Username { get; set; }
+        public Nullable<System.DateTime> ReviewTime { get; set; }
     }
 }
