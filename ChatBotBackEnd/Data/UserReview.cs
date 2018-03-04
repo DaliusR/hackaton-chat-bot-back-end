@@ -18,5 +18,7 @@ namespace ChatBotBackEnd.Data
         public string Msg { get; set; }
         public string Username { get; set; }
         public Nullable<System.DateTime> ReviewTime { get; set; }
+        public string uniqId { get; set; }
+        public Nullable<int> rating { get; set; }
     }
 }

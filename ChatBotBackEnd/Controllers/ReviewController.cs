@@ -11,7 +11,7 @@ namespace ChatBotBackEnd.Controllers
         public HttpResponseMessage Post([FromBody] Models.UserReview model)
         {
 
-            if (!string.IsNullOrWhiteSpace(model.text) && !string.IsNullOrWhiteSpace(model.username))
+            if (!string.IsNullOrWhiteSpace(model.text) && !string.IsNullOrWhiteSpace(model.username) && model.rating != 0)
             {
                 using (var data = new ChatBotBackEnd.Data.ChatBotDBEntities())
                 {
@@ -19,7 +19,9 @@ namespace ChatBotBackEnd.Controllers
                     {
                         Username = model.username,
                         Msg = model.text,
-                        ReviewTime = DateTime.Now
+                        ReviewTime = DateTime.Now,
+                        uniqId = Guid.NewGuid().ToString(),
+                        rating = model.rating
                 });
 
                     if(data.SaveChanges() == 0)
@@ -28,7 +30,7 @@ namespace ChatBotBackEnd.Controllers
                     }
                 }
 
-                var response = Request.CreateResponse(HttpStatusCode.Created, model.text + " " + model.username);
+                var response = Request.CreateResponse(HttpStatusCode.Created, model.text + " " + model.username + "rating " + model.rating);
                 return response;
             }
             else

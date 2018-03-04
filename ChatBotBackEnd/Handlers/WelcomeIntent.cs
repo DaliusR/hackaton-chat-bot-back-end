@@ -9,8 +9,7 @@ namespace ChatBotBackEnd.Handlers
             var sessionId = commonModel.Session.Id;
             var msg = commonModel.Request.Text;
 
-            commonModel.Response.Text = "Hi there, this is ReviewChatBot speaking, can we talk for a minute? Please type yes/no";
-            commonModel.Response.Prompt = "My job is to figure out why you want to leave a negative review";   
+            commonModel.Response.Text = "Hi there, my name is Trustum, can we talk for a minute about your review?"; //\n\n Please type yes/no
 
             using (var data = new ChatBotBackEnd.Data.ChatBotDBEntities())
             {
@@ -23,7 +22,7 @@ namespace ChatBotBackEnd.Handlers
                 data.SaveChanges();
             }
 
-            commonModel.Session.EndSession = true;
+            commonModel.Session.EndSession = false;
 
             return commonModel;
         }

@@ -160,7 +160,15 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Handlers\Question2Intent.cs" />
+    <Compile Include="Handlers\Question2IntentFallback.cs" />
+    <Compile Include="Handlers\Question2NoIntent.cs" />
+    <Compile Include="Handlers\Question2YesIntent.cs" />
+    <Compile Include="Handlers\Question3Intent.cs" />
+    <Compile Include="Handlers\Question4Intent.cs" />
     <Compile Include="Handlers\SecretIntent.cs" />
+    <Compile Include="Handlers\StartConversationIntentFallback.cs" />
+    <Compile Include="Handlers\StartConversationIntentFallbackTo2.cs" />
     <Compile Include="Handlers\WelcomeIntent.cs" />
     <Compile Include="Handlers\YesIntent.cs" />
     <Compile Include="Helpers\CommonModelMapper.cs" />

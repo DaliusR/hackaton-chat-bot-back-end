@@ -10,5 +10,6 @@ namespace ChatBotBackEnd.Models
     {
         public string username { get; set; }
         public string text { get; set; }
+        public int rating { get; set; }
     }
 }

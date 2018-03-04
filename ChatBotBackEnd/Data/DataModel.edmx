@@ -22,6 +22,8 @@
           <Property Name="Msg" Type="varchar" MaxLength="300" Nullable="false" />
           <Property Name="Username" Type="varchar" MaxLength="60" Nullable="false" />
           <Property Name="ReviewTime" Type="datetime" />
+          <Property Name="uniqId" Type="varchar" MaxLength="36" />
+          <Property Name="rating" Type="int" />
         </EntityType>
         <EntityContainer Name="ChatBotDBModelStoreContainer">
           <EntitySet Name="Messages" EntityType="Self.Messages" Schema="dbo" store:Type="Tables" />
@@ -52,6 +54,8 @@
           <Property Name="Msg" Type="String" Nullable="false" MaxLength="300" FixedLength="false" Unicode="false" />
           <Property Name="Username" Type="String" Nullable="false" MaxLength="60" FixedLength="false" Unicode="false" />
           <Property Name="ReviewTime" Type="DateTime" Precision="3" />
+          <Property Name="uniqId" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+          <Property Name="rating" Type="Int32" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -72,6 +76,8 @@
           <EntitySetMapping Name="UserReviews">
             <EntityTypeMapping TypeName="ChatBotDBModel.UserReview">
               <MappingFragment StoreEntitySet="UserReview">
+                <ScalarProperty Name="rating" ColumnName="rating" />
+                <ScalarProperty Name="uniqId" ColumnName="uniqId" />
                 <ScalarProperty Name="ReviewTime" ColumnName="ReviewTime" />
                 <ScalarProperty Name="Username" ColumnName="Username" />
                 <ScalarProperty Name="Msg" ColumnName="Msg" />
